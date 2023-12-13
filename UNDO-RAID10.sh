@@ -1,6 +1,6 @@
 #!/bin/bash
 # RAID device to dismantle
-RAID_DEVICE="/dev/md0" # ATTENTION you must modify this for each RAID partition ie. md0, md1, md2
+RAID_DEVICE="/dev/md0 /dev/md1 /dev/md2"
 # Drives that were part of the RAID array
 DRIVES="/dev/sda /dev/sdb /dev/sdc /dev/sdd"
 # Unmount the RAID array if mounted
