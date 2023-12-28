@@ -34,8 +34,8 @@ mount -o subvol=@home /dev/md0 /mnt/home
 mount -o subvol=@boot /dev/md0 /mnt/boot
 
 # Step 7: Install base system
-echo "ParallelDownloads = 50" >> /mnt/etc/pacman.conf
-pacstrap /mnt base linux linux-firmware vim
+sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 50/' /etc/pacman.conf
+pacstrap /mnt base linux-lts linux-rt-lts linux-lts-headers linux-rt-lts-headers linux-firmware mdadm btrfs-progs neovim
 
 # Step 8: Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
