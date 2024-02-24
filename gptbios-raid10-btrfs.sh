@@ -1,6 +1,7 @@
 #!/bin/bash
-# GPT-BIOS on RAID10 with BTRFS Install Script
+# GPT-BIOS on RAID10 with BTRFS Script
 # Your setup may differ -- modify accordingly
+
 # Exit if any command fails
 set -e
 
